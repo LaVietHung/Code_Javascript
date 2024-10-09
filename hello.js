@@ -1,1 +1,4 @@
-console.log("hello js11111");
+let a=1;
+let b=2;
+let plus= a+b;
+console.log(plus);
