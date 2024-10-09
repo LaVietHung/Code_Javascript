@@ -1,4 +1,5 @@
-let a=1;
-let b=2;
-let plus= a+b;
+let a=2;
+let b=3;
+let c=a+=b;
+let plus= a+b+c;
 console.log(plus);
