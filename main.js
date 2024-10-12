@@ -1,8 +1,10 @@
-function getmoney({value1, value2}){
-    console.log(value1, value2)
+function washcar(){
+    console.log("xe dang duoc rua");
+    for(let i=0; i<5; i++){
+        console.log(`dang bat dau rua buoc so ${i}`);
+    }
+    console.log("xe da rưa xong");
 }
-getmoney('200.000', '100.000')
-getmoney({
-    value1: '200.000',
-    value2: '100.000'
-})
+console.log("bat dau rua xe");
+washcar()
+console.log("dat xe ve nha");
