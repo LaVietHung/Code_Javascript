@@ -1,10 +1,16 @@
 function washcar(){
-    console.log("xe dang duoc rua");
-    for(let i=0; i<5; i++){
-        console.log(`dang bat dau rua buoc so ${i}`);
-    }
-    console.log("xe da rưa xong");
+    return new Promise(resolve => {
+        console.log("xe dang duoc rua");
+        setTimeout(() =>{
+            console.log("xe da rua xong");
+            resolve();
+        }, 5000);
+    });
 }
-console.log("bat dau rua xe");
-washcar()
-console.log("dat xe ve nha");
+    console.log("bat dau di rua xe");
+    washcar().then(() =>{ 
+        console.log("goi dien cho chu xe");
+        console.log("lai xe ve nha");
+
+    });
+    console.log("lam viec khac cho vo");
