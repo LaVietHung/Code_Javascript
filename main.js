@@ -1,16 +1,17 @@
-function washcar(){
-    return new Promise(resolve => {
-        console.log("xe dang duoc rua");
-        setTimeout(() =>{
-            console.log("xe da rua xong");
-            resolve();
-        }, 5000);
-    });
+class Animal{
+    constructor(name,age,call,color){
+        this.name = name
+        this.age = age
+        this.color = color
+        this.call =  call
+    }
+    speak(){
+        return console.log(`con nay la: ${this.name}, nó khoảng: ${this.age}, nó có màu: ${this.color}, nó kêu: ${this.call}`);       
+    }
 }
-    console.log("bat dau di rua xe");
-    washcar().then(() =>{ 
-        console.log("goi dien cho chu xe");
-        console.log("lai xe ve nha");
-
-    });
-    console.log("lam viec khac cho vo");
+const dog = new Animal('Dog', 22, 'gâu gâu', 'đen');
+const cat = new Animal('Cat', 20, 'meo meo', 'vàng');
+const duck = new Animal('Duck', 11, 'cạp cạp', 'trắng');
+dog.speak()
+cat.speak()
+duck.speak()
