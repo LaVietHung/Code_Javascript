@@ -1,17 +1,29 @@
 class Animal{
-    constructor(name,age,call,color){
-        this.name = name
-        this.age = age
-        this.color = color
-        this.call =  call
+    constructor(name){
+        this.name = name;
+
     }
     speak(){
-        return console.log(`con nay la: ${this.name}, nó khoảng: ${this.age}, nó có màu: ${this.color}, nó kêu: ${this.call}`);       
+        return `${this.name} is speaking`;
     }
 }
-const dog = new Animal('Dog', 22, 'gâu gâu', 'đen');
-const cat = new Animal('Cat', 20, 'meo meo', 'vàng');
-const duck = new Animal('Duck', 11, 'cạp cạp', 'trắng');
-dog.speak()
-cat.speak()
-duck.speak()
+class Dog extends Animal{
+    constructor(name){
+        super(name);
+    }
+    call(){
+        return console.log(`${super.speak()}: Gâu gâu`);
+    }
+}
+class Cat extends Animal{
+    constructor(name){
+        super(name);
+    }
+    call(){
+        return console.log(`${super.speak()}: Meo meo`);
+    }
+}
+let dog= new Dog(`dog`)
+let cat= new Cat(`cat`)
+dog.call();
+cat.call();
