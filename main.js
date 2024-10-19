@@ -1,29 +1,15 @@
 class Animal{
-    constructor(name){
-        this.name = name;
-
+    constructor(name,age,call,color){
+        this.name=name;
+        this.age=age;
+        this.call=call;
+        this.color=color;
     }
     speak(){
-        return `${this.name} is speaking`;
+        return console.log(`no la con: ${this.name}, nó khoảng:${this.age}, nó kêu:${this.call}, nó có màu:${this.color}`);
     }
 }
-class Dog extends Animal{
-    constructor(name){
-        super(name);
-    }
-    call(){
-        return console.log(`${super.speak()}: Gâu gâu`);
-    }
-}
-class Cat extends Animal{
-    constructor(name){
-        super(name);
-    }
-    call(){
-        return console.log(`${super.speak()}: Meo meo`);
-    }
-}
-let dog= new Dog(`dog`)
-let cat= new Cat(`cat`)
-dog.call();
-cat.call();
+const dog=new Animal(`dog`,22,`gau gau`,`đen`);
+const cat=new Animal(`cat`,11,`meo meo`,`vang`);
+dog.speak();
+cat.speak();
